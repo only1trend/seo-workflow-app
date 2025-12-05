@@ -1,0 +1,1522 @@
+Yes. Here is your complete, ready-to-use `index.html` file for the **SEO Traffic Workflow Generator** app. Save everything below as a file named exactly `index.html`, then upload it to GitHub as per the steps just described.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Traffic Workflow Generator</title>
+    <style>
+        :root {
+            --color-white: rgba(255, 255, 255, 1);
+            --color-black: rgba(0, 0, 0, 1);
+            --color-cream-50: rgba(252, 252, 249, 1);
+            --color-cream-100: rgba(255, 255, 253, 1);
+            --color-gray-100: rgba(245, 247, 250, 1);
+            --color-gray-200: rgba(229, 231, 235, 1);
+            --color-gray-300: rgba(209, 213, 219, 1);
+            --color-gray-400: rgba(156, 163, 175, 1);
+            --color-gray-500: rgba(107, 114, 128, 1);
+            --color-gray-600: rgba(75, 85, 99, 1);
+            --color-gray-800: rgba(31, 41, 55, 1);
+            --color-slate-900: rgba(15, 23, 42, 1);
+            --color-teal-300: rgba(94, 234, 212, 1);
+            --color-teal-400: rgba(45, 212, 191, 1);
+            --color-teal-500: rgba(20, 184, 166, 1);
+            --color-teal-600: rgba(13, 148, 136, 1);
+            --color-indigo-400: rgba(129, 140, 248, 1);
+            --color-indigo-500: rgba(99, 102, 241, 1);
+            --color-amber-400: rgba(251, 191, 36, 1);
+            --color-rose-500: rgba(244, 63, 94, 1);
+
+            --color-background: radial-gradient(circle at top left, #0f172a, #020617);
+            --color-surface: rgba(15, 23, 42, 0.96);
+            --color-surface-soft: rgba(15, 23, 42, 0.85);
+            --color-border-subtle: rgba(148, 163, 184, 0.18);
+            --color-text: #e5e7eb;
+            --color-text-secondary: #9ca3af;
+            --color-primary: var(--color-teal-400);
+            --color-primary-strong: var(--color-teal-500);
+            --color-primary-soft: rgba(45, 212, 191, 0.12);
+            --color-accent: var(--color-indigo-500);
+            --color-danger: var(--color-rose-500);
+            --color-warning: var(--color-amber-400);
+            --color-focus-ring: rgba(56, 189, 248, 0.45);
+
+            --font-family-base: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-family-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+            --font-size-xs: 11px;
+            --font-size-sm: 13px;
+            --font-size-base: 14px;
+            --font-size-md: 16px;
+            --font-size-lg: 18px;
+            --font-size-xl: 22px;
+            --font-size-2xl: 26px;
+
+            --space-4: 4px;
+            --space-6: 6px;
+            --space-8: 8px;
+            --space-10: 10px;
+            --space-12: 12px;
+            --space-16: 16px;
+            --space-20: 20px;
+            --space-24: 24px;
+            --space-28: 28px;
+            --space-32: 32px;
+            --space-40: 40px;
+
+            --radius-sm: 6px;
+            --radius-base: 10px;
+            --radius-lg: 16px;
+            --radius-xl: 20px;
+            --radius-full: 999px;
+
+            --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.65);
+            --shadow-subtle: 0 1px 3px rgba(15, 23, 42, 0.4);
+
+            --duration-fast: 160ms;
+            --duration-normal: 220ms;
+            --duration-slow: 320ms;
+            --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-family-base);
+            color: var(--color-text);
+            background: var(--color-background);
+        }
+
+        body {
+            min-height: 100vh;
+            padding: var(--space-20);
+            display: flex;
+            justify-content: center;
+        }
+
+        .app-shell {
+            width: 100%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .app-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--space-16);
+            margin-bottom: var(--space-24);
+        }
+
+        .app-title-block {
+            display: flex;
+            align-items: center;
+            gap: var(--space-16);
+        }
+
+        .app-logo {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-lg);
+            background: radial-gradient(circle at 20% 20%, #a5f3fc, #22c55e 40%, #0f172a 85%);
+            box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.4), 0 18px 35px rgba(15, 23, 42, 0.75);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: var(--font-size-md);
+            color: #022c22;
+        }
+
+        h1 {
+            margin: 0 0 4px 0;
+            font-size: var(--font-size-2xl);
+            letter-spacing: 0.02em;
+            display: flex;
+            align-items: center;
+            gap: var(--space-8);
+        }
+
+        .pill {
+            font-size: var(--font-size-xs);
+            padding: 3px 8px;
+            border-radius: var(--radius-full);
+            border: 1px solid rgba(52, 211, 153, 0.4);
+            background: rgba(15, 23, 42, 0.9);
+            color: var(--color-teal-300);
+        }
+
+        .subtitle {
+            margin: 0;
+            font-size: var(--font-size-sm);
+            color: var(--color-text-secondary);
+        }
+
+        .app-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-10);
+            justify-content: flex-end;
+            font-size: var(--font-size-xs);
+            color: var(--color-text-secondary);
+        }
+
+        .meta-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 10px;
+            border-radius: var(--radius-full);
+            border: 1px solid rgba(148, 163, 184, 0.35);
+            background: rgba(15, 23, 42, 0.92);
+        }
+
+        .meta-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: var(--radius-full);
+            background: var(--color-teal-400);
+        }
+
+        .layout-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+            gap: var(--space-20);
+        }
+
+        @media (max-width: 900px) {
+            body {
+                padding: var(--space-12);
+            }
+            .layout-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+            .app-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .app-meta {
+                justify-content: flex-start;
+            }
+        }
+
+        .panel {
+            background: linear-gradient(
+                    145deg,
+                    rgba(15, 23, 42, 0.98),
+                    rgba(15, 23, 42, 0.94)
+            );
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--color-border-subtle);
+            box-shadow: var(--shadow-soft);
+            padding: var(--space-20);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .panel::before {
+            content: "";
+            position: absolute;
+            inset: -60%;
+            background:
+                radial-gradient(circle at 0% 0%, rgba(56, 189, 248, 0.12) 0, transparent 55%),
+                radial-gradient(circle at 100% 0%, rgba(52, 211, 153, 0.16) 0, transparent 60%);
+            opacity: 0.65;
+            pointer-events: none;
+        }
+
+        .panel-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: var(--space-16);
+        }
+
+        .panel-title {
+            font-size: var(--font-size-md);
+            display: flex;
+            align-items: center;
+            gap: var(--space-8);
+        }
+
+        .panel-title-badge {
+            font-size: var(--font-size-xs);
+            padding: 3px 7px;
+            border-radius: var(--radius-full);
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(148, 163, 184, 0.45);
+            color: var(--color-text-secondary);
+        }
+
+        .panel-description {
+            margin: 0 0 var(--space-16) 0;
+            font-size: var(--font-size-sm);
+            color: var(--color-text-secondary);
+        }
+
+        .form-grid {
+            display: grid;
+            gap: var(--space-16);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-label {
+            font-size: var(--font-size-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--color-gray-400);
+        }
+
+        .label-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--space-8);
+        }
+
+        .label-hint {
+            font-size: var(--font-size-xs);
+            color: var(--color-gray-500);
+        }
+
+        .form-control,
+        .select-control,
+        .slider-display {
+            width: 100%;
+            font-size: var(--font-size-sm);
+            padding: var(--space-10) var(--space-12);
+            border-radius: var(--radius-base);
+            border: 1px solid rgba(148, 163, 184, 0.5);
+            background: radial-gradient(circle at 0 0, rgba(148, 163, 184, 0.18), rgba(15, 23, 42, 0.98));
+            color: var(--color-text);
+            outline: none;
+            transition: border-color var(--duration-normal) var(--ease-standard),
+                        box-shadow var(--duration-normal) var(--ease-standard),
+                        background var(--duration-normal) var(--ease-standard),
+                        transform var(--duration-fast) var(--ease-standard);
+        }
+
+        .form-control:focus,
+        .select-control:focus {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.3);
+            transform: translateY(-1px);
+        }
+
+        .form-control::placeholder {
+            color: rgba(148, 163, 184, 0.7);
+        }
+
+        input[type="password"] {
+            font-family: var(--font-family-base);
+        }
+
+        .range-row {
+            display: flex;
+            align-items: center;
+            gap: var(--space-12);
+        }
+
+        .range-row input[type="range"] {
+            flex: 1;
+        }
+
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            height: 4px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+            outline: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #f9fafb;
+            border: 2px solid var(--color-primary-strong);
+            box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.25);
+            cursor: pointer;
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #f9fafb;
+            border: 2px solid var(--color-primary-strong);
+            box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.25);
+            cursor: pointer;
+        }
+
+        .slider-display {
+            width: 70px;
+            text-align: center;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .btn-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-10);
+            margin-top: var(--space-12);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: var(--space-10) var(--space-16);
+            border-radius: var(--radius-full);
+            border: 1px solid transparent;
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            cursor: pointer;
+            background: transparent;
+            color: var(--color-text);
+            transition: background var(--duration-normal) var(--ease-standard),
+                        border-color var(--duration-normal) var(--ease-standard),
+                        transform var(--duration-fast) var(--ease-standard),
+                        box-shadow var(--duration-normal) var(--ease-standard);
+        }
+
+        .btn:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 2px var(--color-focus-ring);
+        }
+
+        .btn-primary {
+            background: radial-gradient(circle at 0 0, #22d3ee, #14b8a6);
+            color: #022c22;
+            border-color: rgba(6, 182, 212, 0.3);
+            box-shadow: 0 12px 30px rgba(8, 47, 73, 0.75);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 16px 40px rgba(8, 47, 73, 0.9);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+            box-shadow: 0 8px 20px rgba(8, 47, 73, 0.7);
+        }
+
+        .btn-secondary {
+            border-color: rgba(148, 163, 184, 0.55);
+            background: rgba(15, 23, 42, 0.96);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(30, 64, 175, 0.35);
+            border-color: rgba(129, 140, 248, 0.8);
+        }
+
+        .btn-ghost {
+            border-color: rgba(148, 163, 184, 0.3);
+            background: rgba(15, 23, 42, 0.85);
+        }
+
+        .btn-ghost:hover {
+            background: rgba(15, 23, 42, 0.98);
+            border-color: rgba(148, 163, 184, 0.7);
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            box-shadow: none;
+            transform: none;
+        }
+
+        .badge-soft {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 8px;
+            border-radius: var(--radius-full);
+            background: rgba(15, 23, 42, 0.92);
+            border: 1px solid rgba(148, 163, 184, 0.5);
+            font-size: var(--font-size-xs);
+            color: var(--color-gray-300);
+        }
+
+        .badge-soft span.dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--color-primary);
+        }
+
+        .stepper {
+            display: flex;
+            align-items: center;
+            gap: var(--space-10);
+            font-size: var(--font-size-xs);
+        }
+
+        .stepper-dots {
+            display: flex;
+            gap: 4px;
+        }
+
+        .stepper-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 999px;
+            background: rgba(51, 65, 85, 0.8);
+            transition: all var(--duration-normal) var(--ease-standard);
+        }
+
+        .stepper-dot.active {
+            width: 18px;
+            background: linear-gradient(90deg, #22d3ee, #22c55e);
+            box-shadow: 0 0 0 1px rgba(45, 212, 191, 0.5);
+        }
+
+        .stepper-label {
+            color: var(--color-text-secondary);
+        }
+
+        .results-panel {
+            background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.98));
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--color-border-subtle);
+            box-shadow: var(--shadow-soft);
+            padding: var(--space-20);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .results-panel::before {
+            content: "";
+            position: absolute;
+            inset: -50%;
+            background:
+                radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.12) 0, transparent 55%),
+                radial-gradient(circle at 100% 100%, rgba(129, 140, 248, 0.14) 0, transparent 65%);
+            opacity: 0.65;
+            pointer-events: none;
+        }
+
+        .results-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .results-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--space-12);
+            margin-bottom: var(--space-16);
+        }
+
+        .results-title {
+            font-size: var(--font-size-md);
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .results-title span.small {
+            font-size: var(--font-size-xs);
+            color: var(--color-text-secondary);
+        }
+
+        .status-pill {
+            font-size: var(--font-size-xs);
+            padding: 4px 8px;
+            border-radius: var(--radius-full);
+            border: 1px solid rgba(52, 211, 153, 0.4);
+            background: rgba(6, 78, 59, 0.5);
+            color: var(--color-teal-300);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .status-pill .pulse-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: var(--color-teal-300);
+            box-shadow: 0 0 0 5px rgba(45, 212, 191, 0.25);
+        }
+
+        .status-pill.idle {
+            border-color: rgba(148, 163, 184, 0.4);
+            background: rgba(15, 23, 42, 0.96);
+            color: var(--color-text-secondary);
+            box-shadow: none;
+        }
+
+        .status-pill.idle .pulse-dot {
+            background: var(--color-gray-500);
+            box-shadow: none;
+        }
+
+        .workflow-output {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-12);
+            max-height: 520px;
+            overflow-y: auto;
+            padding-right: 4px;
+        }
+
+        .section-card {
+            border-radius: var(--radius-lg);
+            padding: var(--space-12);
+            background: rgba(15, 23, 42, 0.96);
+            border: 1px solid rgba(148, 163, 184, 0.35);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(148, 163, 184, 0.15), transparent 38%);
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .section-card-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-header-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--space-10);
+            margin-bottom: var(--space-8);
+        }
+
+        .step-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .step-circle {
+            width: 24px;
+            height: 24px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--font-size-xs);
+            font-weight: 600;
+            color: #0b1120;
+            background: #22d3ee;
+            box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.6);
+        }
+
+        .step-title {
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+        }
+
+        .section-actions {
+            display: flex;
+            align-items: center;
+            gap: var(--space-6);
+            flex-wrap: wrap;
+        }
+
+        .chip {
+            border-radius: var(--radius-full);
+            padding: 3px 8px;
+            font-size: var(--font-size-2xs);
+            background: rgba(15, 23, 42, 0.95);
+            border: 1px solid rgba(148, 163, 184, 0.5);
+            color: var(--color-text-secondary);
+        }
+
+        .chip-primary {
+            border-color: rgba(45, 212, 191, 0.6);
+            color: var(--color-teal-300);
+        }
+
+        .chip-secondary {
+            border-color: rgba(129, 140, 248, 0.6);
+        }
+
+        .toggle-btn {
+            border: none;
+            background: transparent;
+            color: var(--color-gray-400);
+            font-size: var(--font-size-xs);
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        .toggle-btn:hover {
+            color: var(--color-gray-200);
+        }
+
+        .output-box {
+            margin-top: var(--space-8);
+            font-family: var(--font-family-mono);
+            font-size: var(--font-size-xs);
+            line-height: 1.6;
+            color: rgba(209, 213, 219, 0.98);
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            max-height: 260px;
+            overflow-y: auto;
+            padding-right: 2px;
+        }
+
+        .output-box::-webkit-scrollbar,
+        .workflow-output::-webkit-scrollbar {
+            width: 6px;
+        }
+        .output-box::-webkit-scrollbar-track,
+        .workflow-output::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.9);
+        }
+        .output-box::-webkit-scrollbar-thumb,
+        .workflow-output::-webkit-scrollbar-thumb {
+            background: rgba(148, 163, 184, 0.7);
+            border-radius: 999px;
+        }
+
+        .loading-row {
+            display: flex;
+            align-items: center;
+            gap: var(--space-8);
+            font-size: var(--font-size-xs);
+            color: var(--color-text-secondary);
+        }
+
+        .spinner {
+            width: 16px;
+            height: 16px;
+            border-radius: 999px;
+            border: 2px solid rgba(148, 163, 184, 0.6);
+            border-top-color: var(--color-primary);
+            animation: spin 0.7s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .footer-actions {
+            margin-top: var(--space-16);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--space-10);
+            flex-wrap: wrap;
+            font-size: var(--font-size-xs);
+            color: var(--color-text-secondary);
+        }
+
+        .footer-actions-left {
+            display: flex;
+            align-items: center;
+            gap: var(--space-8);
+            flex-wrap: wrap;
+        }
+
+        .footer-actions-right {
+            display: flex;
+            align-items: center;
+            gap: var(--space-8);
+            flex-wrap: wrap;
+        }
+
+        .success-banner,
+        .error-banner {
+            margin-top: var(--space-10);
+            font-size: var(--font-size-xs);
+            padding: 6px 8px;
+            border-radius: var(--radius-full);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .success-banner {
+            background: rgba(21, 128, 61, 0.15);
+            border: 1px solid rgba(34, 197, 94, 0.5);
+            color: #bbf7d0;
+        }
+
+        .error-banner {
+            background: rgba(185, 28, 28, 0.18);
+            border: 1px solid rgba(248, 113, 113, 0.65);
+            color: #fecaca;
+        }
+
+        .dot-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: var(--color-warning);
+        }
+
+        .pill-small {
+            font-size: var(--font-size-2xs);
+            padding: 3px 6px;
+            border-radius: var(--radius-full);
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            background: rgba(15, 23, 42, 0.96);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.32s var(--ease-standard);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(4px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .btn-row {
+                flex-direction: column;
+            }
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="app-shell">
+    <header class="app-header">
+        <div class="app-title-block">
+            <div class="app-logo">SEO</div>
+            <div>
+                <h1>
+                    Traffic Workflow Generator
+                    <span class="pill">Gemini-powered</span>
+                </h1>
+                <p class="subtitle">Turn a niche into a 5-hour ranking plan: keywords, outline, meta tags, outreach, links & checklist.</p>
+            </div>
+        </div>
+        <div class="app-meta">
+            <div class="meta-chip">
+                <span class="meta-dot"></span> Private in-browser tool
+            </div>
+            <div class="meta-chip">
+                🔑 API key stored locally
+            </div>
+            <div class="meta-chip">
+                ⚡ 7-step SEO workflow
+            </div>
+        </div>
+    </header>
+
+    <main class="layout-grid">
+        <section class="panel" aria-label="Setup and input panel">
+            <div class="panel-inner">
+                <div class="panel-header">
+                    <div class="panel-title">
+                        Setup & Inputs
+                        <span class="panel-title-badge">Step 1–2</span>
+                    </div>
+                    <div class="stepper">
+                        <div class="stepper-dots">
+                            <div class="stepper-dot" id="dot-step-1"></div>
+                            <div class="stepper-dot" id="dot-step-2"></div>
+                            <div class="stepper-dot" id="dot-step-3"></div>
+                        </div>
+                        <span class="stepper-label" id="stepperLabel">Connect API key</span>
+                    </div>
+                </div>
+
+                <p class="panel-description">
+                    First connect your free Google Gemini API key, then describe your niche and content assets. The app will chain prompts into a complete campaign workflow.
+                </p>
+
+                <div class="badge-soft" style="margin-bottom: var(--space-12);">
+                    <span class="dot"></span>
+                    Your API key and inputs never leave this browser tab.
+                </div>
+
+                <div id="setupSection" class="form-grid">
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label class="form-label" for="apiKey">Gemini API key</label>
+                            <span class="label-hint">Get it from aistudio.google.com/apikey</span>
+                        </div>
+                        <input
+                            type="password"
+                            id="apiKey"
+                            class="form-control"
+                            placeholder="Paste your Google Gemini API key here…"
+                            autocomplete="off"
+                        />
+                    </div>
+
+                    <div class="btn-row">
+                        <button class="btn btn-primary" type="button" onclick="saveApiKey()">
+                            🔐 Save API key
+                        </button>
+                        <button class="btn btn-ghost" type="button" onclick="window.open('https://aistudio.google.com/apikey', '_blank')">
+                            🌐 Open Google AI Studio
+                        </button>
+                    </div>
+
+                    <div id="apiStatus" class="success-banner hidden"></div>
+                </div>
+
+                <div id="inputSection" class="form-grid hidden" aria-hidden="true">
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label class="form-label" for="niche">Target niche / topic</label>
+                            <span class="label-hint">Describe it like you would to a client</span>
+                        </div>
+                        <input
+                            type="text"
+                            id="niche"
+                            class="form-control"
+                            placeholder="e.g., healthy lunch recipes for busy professionals"
+                            autocomplete="off"
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label class="form-label" for="contentCountRange">Existing content volume</label>
+                            <span class="label-hint" id="contentCountLabel">0 pieces</span>
+                        </div>
+                        <div class="range-row">
+                            <input
+                                type="range"
+                                id="contentCountRange"
+                                min="0"
+                                max="30"
+                                step="1"
+                                value="5"
+                                oninput="syncContentCount()"
+                            />
+                            <input
+                                type="number"
+                                id="contentCount"
+                                class="slider-display"
+                                min="0"
+                                max="999"
+                                value="5"
+                                oninput="syncContentCountFromInput()"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label class="form-label" for="timeframe">Execution timeframe</label>
+                            <span class="label-hint">Used to scope outreach & checklist steps</span>
+                        </div>
+                        <select id="timeframe" class="select-control">
+                            <option value="5 hours">5 hours (fast sprint)</option>
+                            <option value="1 day">1 day</option>
+                            <option value="1 week">1 week</option>
+                        </select>
+                    </div>
+
+                    <div class="btn-row">
+                        <button class="btn btn-primary" type="button" id="generateBtn" onclick="generateWorkflow()">
+                            ⚡ Generate full workflow
+                        </button>
+                        <button class="btn btn-secondary" type="button" onclick="resetApiKey()">
+                            🔁 Change API key
+                        </button>
+                    </div>
+
+                    <div class="success-banner" id="hintBanner">
+                        <span class="dot-indicator"></span>
+                        Tip: Start with a specific niche (e.g., “budget skincare routines for women in their 30s”) for sharper outputs.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="results-panel" aria-label="Results and exports">
+            <div class="results-inner">
+                <div class="results-header">
+                    <div class="results-title">
+                        <span>SEO Workflow Output</span>
+                        <span class="small" id="resultsSubtitle">Waiting to generate your first workflow…</span>
+                    </div>
+                    <div id="statusPill" class="status-pill idle">
+                        <span class="pulse-dot"></span>
+                        <span id="statusPillText">Idle</span>
+                    </div>
+                </div>
+
+                <div id="resultsSection" class="hidden">
+                    <div id="workflowOutput" class="workflow-output"></div>
+
+                    <div class="footer-actions">
+                        <div class="footer-actions-left">
+                            <span class="pill-small">SEO checklist generated as plain text for easy reuse.</span>
+                        </div>
+                        <div class="footer-actions-right">
+                            <button class="btn btn-secondary" type="button" onclick="downloadChecklist()">
+                                📥 Download .txt
+                            </button>
+                            <button class="btn btn-secondary" type="button" onclick="copyToClipboard()">
+                                📋 Copy all
+                            </button>
+                            <button class="btn btn-ghost" type="button" onclick="startOver()">
+                                ↻ New workflow
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="clipboardStatus" class="success-banner hidden">
+                        ✅ Workflow copied to clipboard.
+                    </div>
+                </div>
+
+                <div id="emptyState" class="fade-in">
+                    <div class="section-card">
+                        <div class="section-card-inner">
+                            <div class="section-header-row">
+                                <div class="step-indicator">
+                                    <div class="step-circle">1–7</div>
+                                    <div class="step-title">Full 7-step system</div>
+                                </div>
+                                <div class="section-actions">
+                                    <span class="chip chip-secondary">Keyword research</span>
+                                    <span class="chip chip-secondary">On-page</span>
+                                    <span class="chip chip-secondary">Off-page</span>
+                                </div>
+                            </div>
+                            <div class="output-box">
+Use the left panel to plug in your niche and timeframe.
+
+This app will generate:
+
+1. Trending, low-competition keyword ideas with commentary
+2. A structured content outline with section word counts
+3. SEO meta title, description, and URL slug recommendations
+4. Outreach moves you can execute within your chosen timeframe
+5. Internal linking opportunities based on your existing content volume
+6. A list of ranking-killer mistakes to avoid in this niche
+7. A printable, numbered action checklist to follow step-by-step
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="globalError" class="error-banner hidden"></div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script>
+    const API_KEY_STORAGE = 'gemini_api_key';
+    let currentWorkflow = '';
+    let isGenerating = false;
+
+    function setStepDots(step) {
+        const labels = {
+            1: 'Connect API key',
+            2: 'Describe niche & assets',
+            3: 'Generating full workflow…'
+        };
+        for (let i = 1; i <= 3; i++) {
+            const dot = document.getElementById('dot-step-' + i);
+            if (!dot) continue;
+            dot.classList.toggle('active', i === step);
+        }
+        const label = document.getElementById('stepperLabel');
+        if (label && labels[step]) {
+            label.textContent = labels[step];
+        }
+    }
+
+    window.addEventListener('load', () => {
+        const savedKey = localStorage.getItem(API_KEY_STORAGE);
+        if (savedKey) {
+            document.getElementById('setupSection').classList.add('hidden');
+            const inputSec = document.getElementById('inputSection');
+            inputSec.classList.remove('hidden');
+            inputSec.setAttribute('aria-hidden', 'false');
+            setStepDots(2);
+            const apiStatus = document.getElementById('apiStatus');
+            apiStatus.textContent = 'API key loaded from this browser.';
+            apiStatus.classList.remove('hidden');
+            apiStatus.classList.remove('error-banner');
+            apiStatus.classList.add('success-banner');
+        } else {
+            setStepDots(1);
+        }
+        syncContentCount();
+    });
+
+    async function callGeminiAPI(prompt) {
+        const apiKey = localStorage.getItem(API_KEY_STORAGE);
+        if (!apiKey) {
+            throw new Error('Missing API key. Please add your Gemini API key and try again.');
+        }
+
+        const response = await fetch(
+            'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=' + apiKey,
+            {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    contents: [{ parts: [{ text: prompt }] }]
+                })
+            }
+        );
+
+        if (!response.ok) {
+            let errorMessage = 'API error: ' + response.status;
+            try {
+                const errorData = await response.json();
+                if (errorData.error && errorData.error.message) {
+                    errorMessage = errorData.error.message;
+                }
+            } catch (_) {}
+            throw new Error(errorMessage);
+        }
+
+        const data = await response.json();
+        if (!data.contents || !data.contents[0] || !data.contents[0].parts[0].text) {
+            throw new Error('Unexpected response from Gemini API.');
+        }
+        return data.contents[0].parts[0].text;
+    }
+
+    function saveApiKey() {
+        const input = document.getElementById('apiKey');
+        const apiKey = input.value.trim();
+        const apiStatus = document.getElementById('apiStatus');
+
+        if (!apiKey) {
+            apiStatus.textContent = 'Please paste your Gemini API key first.';
+            apiStatus.classList.remove('hidden', 'success-banner');
+            apiStatus.classList.add('error-banner');
+            return;
+        }
+
+        localStorage.setItem(API_KEY_STORAGE, apiKey);
+        input.value = '';
+
+        document.getElementById('setupSection').classList.add('hidden');
+        const inputSec = document.getElementById('inputSection');
+        inputSec.classList.remove('hidden');
+        inputSec.setAttribute('aria-hidden', 'false');
+
+        apiStatus.textContent = 'API key saved securely in this browser.';
+        apiStatus.classList.remove('hidden', 'error-banner');
+        apiStatus.classList.add('success-banner');
+
+        setStepDots(2);
+    }
+
+    function resetApiKey() {
+        localStorage.removeItem(API_KEY_STORAGE);
+        document.getElementById('inputSection').classList.add('hidden');
+        document.getElementById('resultsSection').classList.add('hidden');
+        document.getElementById('emptyState').classList.remove('hidden');
+        document.getElementById('setupSection').classList.remove('hidden');
+
+        currentWorkflow = '';
+        isGenerating = false;
+        updateStatus('Idle', true);
+        updateSubtitle('Waiting to generate your first workflow…');
+
+        const globalError = document.getElementById('globalError');
+        globalError.classList.add('hidden');
+        globalError.textContent = '';
+
+        const apiStatus = document.getElementById('apiStatus');
+        apiStatus.textContent = '';
+        apiStatus.classList.add('hidden');
+
+        setStepDots(1);
+    }
+
+    function syncContentCount() {
+        const range = document.getElementById('contentCountRange');
+        const input = document.getElementById('contentCount');
+        const label = document.getElementById('contentCountLabel');
+        if (!range || !input || !label) return;
+
+        input.value = range.value;
+        const val = Number(range.value) || 0;
+        label.textContent = val + (val === 1 ? ' piece' : ' pieces');
+    }
+
+    function syncContentCountFromInput() {
+        const range = document.getElementById('contentCountRange');
+        const input = document.getElementById('contentCount');
+        const label = document.getElementById('contentCountLabel');
+        if (!range || !input || !label) return;
+
+        let val = parseInt(input.value || '0', 10);
+        if (isNaN(val) || val < 0) val = 0;
+        if (val > 999) val = 999;
+        input.value = val;
+
+        const sliderVal = Math.max(0, Math.min(30, val));
+        range.value = sliderVal;
+
+        label.textContent = val + (val === 1 ? ' piece' : ' pieces');
+    }
+
+    function updateStatus(text, idle = false) {
+        const pill = document.getElementById('statusPill');
+        const pillText = document.getElementById('statusPillText');
+
+        pillText.textContent = text;
+        pill.classList.toggle('idle', idle);
+    }
+
+    function updateSubtitle(text) {
+        const el = document.getElementById('resultsSubtitle');
+        if (el) el.textContent = text;
+    }
+
+    async function generateWorkflow() {
+        if (isGenerating) return;
+        const niche = document.getElementById('niche').value.trim();
+        const contentCount = parseInt(document.getElementById('contentCount').value || '0', 10) || 0;
+        const timeframe = document.getElementById('timeframe').value;
+
+        const globalError = document.getElementById('globalError');
+        globalError.classList.add('hidden');
+        globalError.textContent = '';
+
+        if (!niche) {
+            globalError.textContent = 'Please enter a clear niche or topic before generating the workflow.';
+            globalError.classList.remove('hidden');
+            return;
+        }
+
+        document.getElementById('resultsSection').classList.remove('hidden');
+        document.getElementById('emptyState').classList.add('hidden');
+        const outputDiv = document.getElementById('workflowOutput');
+        outputDiv.innerHTML = '';
+
+        const generateBtn = document.getElementById('generateBtn');
+        generateBtn.disabled = true;
+        isGenerating = true;
+        updateStatus('Generating workflow…', false);
+        updateSubtitle('Running chained prompts for this niche: "' + niche + '".');
+        setStepDots(3);
+
+        currentWorkflow = '';
+
+        try {
+            const sectionConfigs = [
+                {
+                    step: 1,
+                    title: 'Trending keywords (low competition)',
+                    chip: 'Discovery',
+                    description: 'Researching opportunity keywords…',
+                    prompt: `Act as an SEO strategist. For the niche "${niche}", provide:
+1) A list of 5–7 trending search keywords with decent search interest but relatively low competition.
+2) For each keyword, add 1–2 bullet points explaining why it has ranking potential (intent, SERP quality, monetization potential, etc.).
+3) Then pick ONE primary target keyword and explain briefly why it is the best tradeoff of volume vs. competition.
+Format this as a clear, scannable outline with headings and bullets.`,
+                    addToWorkflowTitle: '## STEP 1: TRENDING KEYWORDS\n'
+                },
+                {
+                    step: 2,
+                    title: 'Content outline (rankable structure)',
+                    chip: 'On-page',
+                    description: 'Structuring your content…',
+                    prompt: `Create a detailed SEO content outline for a long-form guide targeting your best keyword in the niche "${niche}".
+Include:
+1) A hook-driven introduction that connects to the audience pain point.
+2) 5–7 main H2 sections with suggested H3s under each where relevant.
+3) Recommended word count range for each main section.
+4) A conclusion that drives to a CTA (newsletter, lead magnet, product, etc.).
+Focus on clarity, skimmability, and search intent satisfaction.`,
+                    addToWorkflowTitle: '## STEP 2: CONTENT OUTLINE\n'
+                },
+                {
+                    step: 3,
+                    title: 'Meta title & description',
+                    chip: 'Snippet',
+                    description: 'Writing your SERP snippet…',
+                    prompt: `For a page in the niche "${niche}", using your chosen primary keyword:
+1) Write 3 different SEO-optimized meta titles (max ~60 characters). Each must include the target keyword and a strong benefit or outcome hook.
+2) Write 3 matching meta descriptions (max ~155–160 characters). Each should include the keyword naturally, promise clear value, and end with a light CTA.
+3) Suggest a clean, SEO-friendly URL slug.
+Present this in a simple, numbered list so it is easy to A/B test.`,
+                    addToWorkflowTitle: '## STEP 3: SEO META TAGS\n'
+                },
+                {
+                    step: 4,
+                    title: 'Fast outreach moves',
+                    chip: timeframe,
+                    description: 'Planning external promotion…',
+                    prompt: `Design a very practical outreach and promotion mini-plan for this niche "${niche}" that can be executed in ${timeframe}.
+Include:
+1) One social media play (which platform, what content format, what to show, and how to link to the main asset).
+2) One guest post or contribution play (target site types, angle of the pitch, and how to tie it back to the core guide).
+3) One collaboration play (what type of partner, what they get, and what you get).
+Make each suggestion highly specific and realistic to complete in ${timeframe}.`,
+                    addToWorkflowTitle: '## STEP 4: OUTREACH STRATEGIES\n'
+                }
+            ];
+
+            const internalLinkingConfig = {
+                step: 5,
+                title: 'Internal linking map',
+                chip: 'Site structure',
+                description: 'Connecting your existing assets…',
+                promptTemplate: (count) => `Assume I already have about ${count} existing pieces of content related to "${niche}" (mix of blog posts or videos).
+Create an internal linking mini-plan that:
+1) Suggests 4–6 plausible topics/titles those existing pieces could cover.
+2) For each, explains where in that content I should add a link to the new guide (intro, body, conclusion) and why.
+3) Provides recommended anchor text examples for each link.
+4) Explains, in 2–3 bullets, how this internal linking helps the new page rank faster.
+Make this feel like a practical checklist I can implement in under an hour.`,
+                addToWorkflowTitle: '## STEP 5: INTERNAL LINKING STRATEGY\n'
+            };
+
+            const mistakesConfig = {
+                step: 6,
+                title: 'Ranking killers to avoid',
+                chip: 'Quality control',
+                description: 'Flagging pitfalls…',
+                prompt: `List 6–8 common mistakes people make when creating content in the "${niche}" space that hurt either SEO rankings or engagement.
+For each mistake:
+1) Name the mistake concisely.
+2) Explain in 1–2 sentences why it hurts performance.
+3) Provide a clear "do this instead" correction.
+Format this as a checklist that a writer or editor can keep next to them while finalizing the content.`,
+                addToWorkflowTitle: '## STEP 6: RANKING KILLERS TO AVOID\n'
+            };
+
+            const checklistConfig = {
+                step: 7,
+                title: 'Execution checklist',
+                chip: 'Printable',
+                description: 'Summarizing everything into actions…',
+                prompt: `Turn the full process (keyword research, outline, meta, outreach, internal links, avoiding mistakes) for the niche "${niche}" into a numbered checklist.
+Requirements:
+- 12–18 steps total.
+- Each step is 1 line, action-oriented, and can be ticked off.
+- Steps should be roughly chronological, from research → writing → optimization → outreach → internal links → final review.
+- Assume execution timeframe of ${timeframe}.
+Do not add commentary, just the checklist steps.`,
+                addToWorkflowTitle: '## STEP 7: ACTION CHECKLIST\n'
+            };
+
+            const allSections = [];
+
+            function createSectionCard(headerTitle, stepNum, chipLabel, loadingText) {
+                const wrapper = document.createElement('div');
+                wrapper.className = 'section-card fade-in';
+                const innerHTML = `
+                    <div class="section-card-inner">
+                        <div class="section-header-row">
+                            <div class="step-indicator">
+                                <div class="step-circle">${stepNum}</div>
+                                <div class="step-title">${headerTitle}</div>
+                            </div>
+                            <div class="section-actions">
+                                <span class="chip chip-primary">${chipLabel}</span>
+                                <button class="toggle-btn" type="button" onclick="toggleSectionBody(this)">
+                                    <span>Collapse</span> ▾
+                                </button>
+                            </div>
+                        </div>
+                        <div class="loading-row">
+                            <div class="spinner"></div>
+                            <span>${loadingText}</span>
+                        </div>
+                        <div class="output-box hidden"></div>
+                    </div>
+                `;
+                wrapper.innerHTML = innerHTML;
+                return wrapper;
+            }
+
+            const outputDiv = document.getElementById('workflowOutput');
+
+            for (const config of sectionConfigs) {
+                const section = createSectionCard(
+                    config.title,
+                    config.step,
+                    config.chip,
+                    config.description
+                );
+                outputDiv.appendChild(section);
+                allSections.push({ config, element: section });
+            }
+
+            if (contentCount > 0) {
+                const sec = createSectionCard(
+                    internalLinkingConfig.title,
+                    internalLinkingConfig.step,
+                    internalLinkingConfig.chip,
+                    internalLinkingConfig.description
+                );
+                outputDiv.appendChild(sec);
+                allSections.push({ config: internalLinkingConfig, element: sec });
+            }
+
+            const mistakesSectionElement = createSectionCard(
+                mistakesConfig.title,
+                mistakesConfig.step,
+                mistakesConfig.chip,
+                mistakesConfig.description
+            );
+            outputDiv.appendChild(mistakesSectionElement);
+            allSections.push({ config: mistakesConfig, element: mistakesSectionElement });
+
+            const checklistSectionElement = createSectionCard(
+                checklistConfig.title,
+                checklistConfig.step,
+                checklistConfig.chip,
+                checklistConfig.description
+            );
+            outputDiv.appendChild(checklistSectionElement);
+            allSections.push({ config: checklistConfig, element: checklistSectionElement });
+
+            currentWorkflow = `SEO TRAFFIC WORKFLOW - ${niche.toUpperCase()}\nGenerated: ${new Date().toLocaleString()}\nTimeframe: ${timeframe}\n\n`;
+
+            for (const { config, element } of allSections) {
+                const outputBox = element.querySelector('.output-box');
+                const loadingRow = element.querySelector('.loading-row');
+                let promptText = '';
+
+                if (config === internalLinkingConfig) {
+                    promptText = config.promptTemplate(contentCount);
+                } else if (config === mistakesConfig || config === checklistConfig) {
+                    promptText = config.prompt;
+                } else {
+                    promptText = config.prompt;
+                }
+
+                const text = await callGeminiAPI(promptText);
+                loadingRow.classList.add('hidden');
+                outputBox.textContent = text;
+                outputBox.classList.remove('hidden');
+
+                currentWorkflow += config.addToWorkflowTitle + text + '\n\n';
+            }
+
+            updateStatus('Complete', true);
+            updateSubtitle('Workflow generated. Download or copy your checklist below.');
+        } catch (error) {
+            console.error(error);
+            const globalError = document.getElementById('globalError');
+            globalError.textContent = error.message || 'Something went wrong while generating the workflow.';
+            globalError.classList.remove('hidden');
+            updateStatus('Error', true);
+            updateSubtitle('Fix the error shown and run again.');
+        } finally {
+            isGenerating = false;
+            const generateBtn = document.getElementById('generateBtn');
+            generateBtn.disabled = false;
+        }
+    }
+
+    function toggleSectionBody(button) {
+        const card = button.closest('.section-card-inner');
+        if (!card) return;
+        const outputBox = card.querySelector('.output-box');
+        if (!outputBox || outputBox.classList.contains('hidden')) return;
+
+        const isCollapsed = outputBox.style.display === 'none';
+        outputBox.style.display = isCollapsed ? 'block' : 'none';
+        button.querySelector('span').textContent = isCollapsed ? 'Collapse' : 'Expand';
+        button.lastChild.textContent = isCollapsed ? ' ▾' : ' ▸';
+    }
+
+    function downloadChecklist() {
+        if (!currentWorkflow) {
+            alert('No workflow generated yet.');
+            return;
+        }
+        const element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(currentWorkflow));
+        element.setAttribute('download', 'seo-workflow-checklist.txt');
+        element.style.display = 'none';
+        document.body.appendChild(element);
+        element.click();
+        document.body.removeChild(element);
+    }
+
+    function copyToClipboard() {
+        if (!currentWorkflow) {
+            alert('No workflow generated yet.');
+            return;
+        }
+        navigator.clipboard.writeText(currentWorkflow).then(() => {
+            const status = document.getElementById('clipboardStatus');
+            status.classList.remove('hidden');
+            setTimeout(() => {
+                status.classList.add('hidden');
+            }, 2000);
+        }).catch(err => {
+            alert('Failed to copy: ' + err);
+        });
+    }
+
+    function startOver() {
+        document.getElementById('resultsSection').classList.add('hidden');
+        document.getElementById('emptyState').classList.remove('hidden');
+        document.getElementById('workflowOutput').innerHTML = '';
+        document.getElementById('niche').value = '';
+        document.getElementById('contentCount').value = '5';
+        document.getElementById('contentCountRange').value = '5';
+        syncContentCount();
+        currentWorkflow = '';
+        updateStatus('Idle', true);
+        updateSubtitle('Waiting to generate your first workflow…');
+        const globalError = document.getElementById('globalError');
+        globalError.classList.add('hidden');
+        globalError.textContent = '';
+        setStepDots(2);
+    }
+</script>
+</body>
+</html>
+```
+
+Once saved as `index.html`, you can upload this file to your GitHub repo and enable GitHub Pages using the step-by-step guide given earlier.
